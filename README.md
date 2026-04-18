@@ -1,0 +1,1 @@
+Excuse Generator is a lightweight web application built with HTML, CSS, and JavaScript that creates random, humorous excuses using a combination of predefined phrases. The goal of the project is to demonstrate basic JavaScript logic, DOM manipulation, and user interaction in a fun and engaging way. Users can generate endless variations of excuses with a single click.
