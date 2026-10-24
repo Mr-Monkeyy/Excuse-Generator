@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Excuse Generator</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Comic Sans MS, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#excuse {
+  font-size: 20px;
+  margin: 20px 0;
+  min-height: 60px;
+  opacity: 0.9;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background: rgb(97, 230, 230);
+  color: black;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Excuse Generator</h1>
+  <p id="excuse">Click the button to generate an excuse...</p>
+  <button onclick="generate()">Generate Excuse</button>
+</div>
+
+<script>
+const starts = [
+  "Sorry, I couldn't",
+  "I tried to",
+  "I was about to",
+  "I really wanted to",
+  "I planned to"
+];
+
+const actions = [
+  "finish the assignment",
+  "join the meeting",
+  "reply to your message",
+  "come to class",
+  "complete the task"
+];
+
+const reasons = [
+  "but my WiFi stopped existing",
+  "The dog ate it",
+  "I was so sick!",
+  "but my laptop froze and judged me",
+  "but I accidentally fell asleep",
+  "but my motivation disappeared",
+  "but I got stuck in a YouTube loop",
+  "but my alarm betrayed me",
+  "My computer crashed.",
+  "but I had a deep life crisis"
+];
+
+function generate() {
+  const start = starts[Math.floor(Math.random() * starts.length)];
+  const action = actions[Math.floor(Math.random() * actions.length)];
+  const reason = reasons[Math.floor(Math.random() * reasons.length)];
+
+  const excuse = `${start} ${action}, ${reason}.`;
+
+  document.getElementById("excuse").textContent = excuse;
+}
+</script>
+
+</body>
+</html>
